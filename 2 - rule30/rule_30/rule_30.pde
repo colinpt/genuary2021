@@ -38,7 +38,6 @@ void draw(){
     pushMatrix();
     translate(width/2, height/2);
     float cr = (PI/4) * s;
-    println(degrees(cr));
     if (s  == 1) scale (-1, 1); //<>//
     else if (s == 2) rotate(PI/2);
     else if (s == 3) {
@@ -52,12 +51,11 @@ void draw(){
       scale (-1, 1);
       rotate(-PI/2);
     }
-    //else 
     
     int r = 0;
     int g = 0;
     int b = 0;
-   //if(s == 0){
+
     for(int i=0; i < GRID_SIZE/2; i++){
       for(int j=0; j < GRID_SIZE/2; j++){
           if (grid[i][j] == 1){
@@ -75,9 +73,7 @@ void draw(){
             rect(i*4,j*4,4,4);
           }
       }
-    }
-  // }
-    
+    }    
     popMatrix();
   }
   
